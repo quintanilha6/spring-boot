@@ -4,6 +4,6 @@
 </head>
 
 <body>
-	Welcome, ${name}!
+	Welcome, ${name}! <a href="/list-todos">Click here</a></a> to manage your To Do List.
 </body>
 </html>
