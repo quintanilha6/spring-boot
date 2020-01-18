@@ -1,9 +1,8 @@
-<htlm>
-<head>
-<title>Web app</title>
-</head>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
-<body>
+<div class="container">
 	Welcome, ${name}! <a href="/list-todos">Click here</a></a> to manage your To Do List.
-</body>
-</html>
+</div>
+
+<%@ include file="common/footer.jspf" %>
