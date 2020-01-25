@@ -22,5 +22,15 @@ This repository offers a simple templats for both restful API and full stack env
 
 (*) - These are the annotations that Spring looks for on start up 
 
+## Useful starter projects
+
+* spring-boot-starter-web-services
+* spring-boot-starter-test
+* spring-boot-starter-jdbc
+* spring-boot-starter-security
+* spring-boot-starter-data-jpa
+* spring-boot-starter-data-rest
+More information about these (and other) projects [here](https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-starter)
+
 ## Credits 
 This repo had the help of [this course](https://www.udemy.com/course/spring-boot-tutorial-for-beginners/). Each folders refers to the different fields of the ToC defined within it.
