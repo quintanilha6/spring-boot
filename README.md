@@ -16,6 +16,7 @@ This repository offers a simple templats for both restful API and full stack env
 @RequestMapping(value="/<ROUTE>", method= RequestMethod.GET) - Maps the request to <ROUTE> and specifies the type of request<br> 
 @SessionAttributes("<ATTRIBUTE>") - saves <ATRIBUTE> in session, i.e. accross diferent views<br>
 @InitBinder - populating command and form object arguments of annotated handler methods <br>
+@RestController - Types that carry this annotation are treated as controllers where @RequestMapping methods assume @ResponseBody semantics by default. 
 
 ## Credits 
 This repo had the help of [this course](https://www.udemy.com/course/spring-boot-tutorial-for-beginners/). Each folders refers to the different fields of the ToC defined within it.
