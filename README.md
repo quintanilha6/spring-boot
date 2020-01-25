@@ -10,7 +10,7 @@ This repository offers a simple templats for both restful API and full stack env
 * **09 - Appendix** - First steps in Spring
 
 ## Spring Tags
-@Controller - Allows classes implementationsto be autodetected through classpath scanning, i.e. looks up for different @Components<br>
+@Controller - Allows classes implementationsto be autodetected through classpath scanning, i.e. looks up for different and distinct @Components<br>
 @Component - Tells spring that the class is a Bean<br>
 @Autowire - Avoids the new for new Class(). Tells spring to link the new instance to the class.<br>
 @RequestMapping(value="/<ROUTE>", method= RequestMethod.GET) - Maps the request to <ROUTE> and specifies the type of request<br> 
