@@ -18,4 +18,4 @@ This repository offers a simple templats for both restful API and full stack env
 @InitBinder - populating command and form object arguments of annotated handler methods <br>
 
 ## Credits 
-This rpeo had the help of [this course](https://www.udemy.com/course/spring-boot-tutorial-for-beginners/). Each folders refers to the different fields of the ToC defined within it.
+This repo had the help of [this course](https://www.udemy.com/course/spring-boot-tutorial-for-beginners/). Each folders refers to the different fields of the ToC defined within it.
