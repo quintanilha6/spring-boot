@@ -1,8 +1,10 @@
 package com.quinta.springboot.controller;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,10 +39,12 @@ public class SurveyController {
 	*	POSTS  *
 	***********/
 	PostMapping("/surveys/{_surveyId}/questions/")
-	public Question addQuestionToSurvey(@PathVariable String _surveyId, @RequestBody Question _newQuestion) {
+	public ResponseEntity<void> addQuestionToSurvey(@PathVariable String _surveyId, @RequestBody Question _newQuestion) {
 		Question question = surveyService.addQuestion(_surveyId, _newQuestion);
 		
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(question.getId()).toUri();
+		
+		return ResponseEntity.created(location).build();
 	}
 }
 
