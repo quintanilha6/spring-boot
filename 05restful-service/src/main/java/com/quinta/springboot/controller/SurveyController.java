@@ -36,8 +36,7 @@ public class SurveyController {
 	}
 	
 	/***********
-	*	POSTS  
-	 * @return *
+	*	POSTS  *
 	***********/
 	@PostMapping("/surveys/{_surveyId}/questions")
 	public ResponseEntity<Void> addQuestionToSurvey(@PathVariable String _surveyId, @RequestBody Question _newQuestion) {
