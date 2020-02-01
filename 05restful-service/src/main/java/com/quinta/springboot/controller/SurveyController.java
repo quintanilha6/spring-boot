@@ -39,9 +39,12 @@ public class SurveyController {
 	*	POSTS  
 	 * @return *
 	***********/
-	@PostMapping("/surveys/{_surveyId}/questions/")
+	@PostMapping("/surveys/{_surveyId}/questions")
 	public ResponseEntity<Void> addQuestionToSurvey(@PathVariable String _surveyId, @RequestBody Question _newQuestion) {
 		Question question = surveyService.addQuestion(_surveyId, _newQuestion);
+		
+		if(question == null)
+			return ResponseEntity.noContent().build();
 		
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(question.getId()).toUri();
 		
