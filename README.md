@@ -19,17 +19,20 @@ This repository offers a simple templats for both restful API and full stack env
     * Provide a range of non-functional features that are common to large classes of projects (e.g. embedded servers, security, metrics, health checks, externalized configuration).
 
 ## Some Important Spring Tags
-@Controller* - Allows classes implementationsto be autodetected through classpath scanning, i.e. looks up for different and distinct @Components<br>
-@Component/@Service* - Tells spring that the class is a Bean<br>
+@Controller* - Allows classes implementationsto be autodetected through classpath scanning, i.e. looks up for different and distinct @Components.<br>
+@Component/@Service* - Tells spring that the class is a Bean.<br>
 @Autowire - Avoids the new for new Class(). Tells spring to link the new instance to the class.<br>
-@RequestMapping(value="/ROUTE", method= RequestMethod.GET) - Maps the request to ROUTE and specifies the type of request<br> 
-@SessionAttributes("ATTRIBUTE") - saves ATRIBUTE in session, i.e. accross diferent views<br>
-@InitBinder - populating command and form object arguments of annotated handler methods<br>
+@RequestMapping(value="/ROUTE", method= RequestMethod.GET) - Maps the request to ROUTE and specifies the type of request.<br> 
+@SessionAttributes("ATTRIBUTE") - saves ATRIBUTE in session, i.e. accross diferent views.<br>
+@InitBinder - populating command and form object arguments of annotated handler methods.<br>
 @RestController* - Types that carry this annotation are treated as controllers where @RequestMapping methods assume @ResponseBody semantics by default.<br>
-@ComponentScan("PACKAGES_TO_SEARCH_FOR_DEPENDENCIES") - Searches for annotations in PACKAGES_TO_SEARCH_FOR_DEPENDENCIES<br>
+@ComponentScan("PACKAGES_TO_SEARCH_FOR_DEPENDENCIES") - Searches for annotations in PACKAGES_TO_SEARCH_FOR_DEPENDENCIES.<br>
 @Repository* -  indicates that the decorated class is a repository. A repository is a mechanism for encapsulating storage, retrieval, and search behavior which emulates a collection of objects.<br> 
-@PathVarible - tells spring that the specific variable is a variable for the endpoint path<br>
-@Profile("PROFILE") - Subsequent code only runs if PROFILE matches the active profile <br>
+@PathVarible - tells spring that the specific variable is a variable for the endpoint path.<br>
+@Profile("PROFILE") - Subsequent code only runs if PROFILE matches the active profile.<br>
+@ConfigurationProperties("NAME_OF_CONFIG") - Make service configuration throughout a Bean and expose it dynamically.<br>
+@Entity - Creates a table with the name of the class.<br>
+@Id + @GeneratedValue(strategy=GenerationType.AUTO) - Sets variable on jpa to be seen as Id and use AUTO strategy to generate the row id.<br>
 
 (*) - These are the annotations that Spring looks for on start up 
 
