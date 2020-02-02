@@ -29,6 +29,7 @@ This repository offers a simple templats for both restful API and full stack env
 @ComponentScan("PACKAGES_TO_SEARCH_FOR_DEPENDENCIES") - Searches for annotations in PACKAGES_TO_SEARCH_FOR_DEPENDENCIES<br>
 @Repository* -  indicates that the decorated class is a repository. A repository is a mechanism for encapsulating storage, retrieval, and search behavior which emulates a collection of objects.<br> 
 @PathVarible - tells spring that the specific variable is a variable for the endpoint path<br>
+@Profile("PROFILE") - Subsequent code only runs if PROFILE matches the active profile <br>
 
 (*) - These are the annotations that Spring looks for on start up 
 
