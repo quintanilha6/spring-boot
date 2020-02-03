@@ -33,6 +33,7 @@ This repository offers a simple templats for both restful API and full stack env
 @ConfigurationProperties("NAME_OF_CONFIG") - Make service configuration throughout a Bean and expose it dynamically.<br>
 @Entity - Creates a table with the name of the class.<br>
 @Id + @GeneratedValue(strategy=GenerationType.AUTO) - Sets variable on jpa to be seen as Id and use AUTO strategy to generate the row id.<br>
+@RepositoryRestResource - Creates all methods (GET, POST, PUT, DEL, etc) to the repository used in extention of the interface <br>
 
 (*) - These are the annotations that Spring looks for on start up 
 
