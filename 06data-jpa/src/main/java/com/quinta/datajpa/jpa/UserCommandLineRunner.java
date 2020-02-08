@@ -22,12 +22,14 @@ public class UserCommandLineRunner implements CommandLineRunner{
 		repository.save(new User("Peter", "User"));
 		repository.save(new User("Milton", "User"));
 		
+		log.info("__________________");
+		log.info("Normal users are...");
 		for (User user: repository.findAll()) {
 			log.info(user.toString());
 		}
 		
-		log.info("Admin users are...");
 		log.info("__________________");
+		log.info("Admin users are...");
 		for (User user: repository.findByRole("Admin")) {
 			log.info(user.toString());
 		}
