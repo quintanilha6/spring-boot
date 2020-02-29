@@ -15,6 +15,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
@@ -25,7 +26,7 @@ import com.quinta.springboot.model.Question;
 import com.quinta.springboot.service.SurveyService;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(SurveyController.class)
+@WebMvcTest(value = SurveyController.class)
 public class SurveyControllerTest {
 
 	@Autowired
@@ -34,7 +35,8 @@ public class SurveyControllerTest {
 	
 	@MockBean
 	private SurveyService surveyService;
-
+	
+	@WithMockUser(username = "user1", password = "secret1")
 	@Test
 	public void testMethod() throws Exception {
 		Question mockQuestion = new Question("Question1",
@@ -56,8 +58,9 @@ public class SurveyControllerTest {
 		
 	}
 	
+	@WithMockUser(username = "user1", password = "secret1")
 	@Test 
-	public void creatSurveyQuestion() throws Exception {
+	public void createSurveyQuestion() throws Exception {
 		Question mockQuestion = new Question("1", "Smallest Number", "1", Arrays.asList("1", "2", "3", "4"));
 		
 		String questionJson = "{\"description\":\"Smallest Number\",\"correctAnswer\":\"1\",\"options\":[\"1\",\"2\",\"3\",\"4\"]}";

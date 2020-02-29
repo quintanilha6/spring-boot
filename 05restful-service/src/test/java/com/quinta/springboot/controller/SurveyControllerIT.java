@@ -45,13 +45,15 @@ class SurveyControllerIT {
 	private int port;
 	
 	TestRestTemplate restTemplate = new TestRestTemplate();
-	HttpHeaders headers = new HttpHeaders();
+	HttpHeaders headers =   new HttpHeaders(); 
+	
 	
 	@BeforeEach
 	public void before() {
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 	}
 	
+
 	@Test
 	public void testJsonAssert() throws JSONException {
 		JSONAssert.assertEquals("{id:1}", "{id:1,name:quinta}", false);
@@ -70,7 +72,8 @@ class SurveyControllerIT {
 
 		JSONAssert.assertEquals(expected, response.getBody(), false);
 	}
-
+	
+	
 	@Test
 	public void retrieveAllSurveyQuestions() throws Exception {
 		String retrieveAllQuestions = "/surveys/Survey1/questions";
@@ -88,8 +91,9 @@ class SurveyControllerIT {
 		assertTrue(response.getBody().contains(sampleQuestion));
 	}
 	
+	
 	@Test
-	public void addQuestion() {
+	public void addQuestion() throws Exception {
 		String addQuestionURI = "/surveys/Survey1/questions/";
 		String url = createURLWithPort(addQuestionURI);
 
